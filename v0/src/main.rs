@@ -1,4 +1,14 @@
+pub mod vm;
+
 fn main() {
-    // testing that git commit/pushing still works
-    println!("Hello, world!");
+    let vm1 = vm::VM{
+        map: 4
+    };
+    let mut vm2 = vm::VM::new();
+    vm2.act(vm::Op::Pass);
+
+    println!("{}, {}", 0, vm2.map);
 }
+
+
+
